@@ -38,7 +38,7 @@
 </head>
 <body>
   <div class="fullscreen-bg">
-    <img src="your-image-url.jpg" alt="Fullscreen Background Image">
+    <img src="/main/Error%20404.jpeg" alt="Fullscreen Background Image">
   </div>
   <div class="error-text">
     <h1>Error 404</h1>
