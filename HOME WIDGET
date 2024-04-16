@@ -31,6 +31,6 @@
 </head>
 <body>
     <div id="widget">
-        <a href="/Domino-Games/index.html"><img src="../home.png" alt="Home"></a>
+        <a href="/Domino-Games/index.html"><img src="/Domino-Games/home.png" alt="Home"></a>
     </div>
 </body>
