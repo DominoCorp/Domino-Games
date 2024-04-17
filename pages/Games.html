@@ -59,6 +59,26 @@
     padding: 10px 0; /* Add padding for better readability */
     background-color: rgba(0, 0, 0, 0.5); /* Add a semi-transparent background */
   }
+  .back-button {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 2px solid yellow;
+    background-color: transparent;
+    color: yellow;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    outline: none;
+    text-decoration: none;
+  }
+  .back-button:hover {
+    font-size: 20px;
+    background-color: yellow;
+    color: transparent;
+  }
 </style>
 </head>
 <body>
@@ -67,7 +87,6 @@
 <div class="container">
   <!-- Slot 1 -->
   <a href="/Domino-Games/1v1.lol/">
-  <a href="/Domino-Games/1v1.lol/index.html">
     <div class="slot">
       <img src="/Domino-Games/1v1.lol/1v1.lol_(LOGO).jpeg" alt="1v1.lol">
       <div class="slot-text">1v1.lol</div>
@@ -76,7 +95,6 @@
 
   <!-- Slot 2 -->
   <a href="/Domino-Games/Minecraft/">
-  <a href="/Domino-Games/Minecraft/Minecraft.html">
     <div class="slot">
       <img src="/Domino-Games/Minecraft/Minecraft-LOGO.jpeg" alt="Minecraft">
       <div class="slot-text">Minecraft</div>
@@ -84,5 +102,9 @@
   </a>
   <!-- Add more slots as needed -->
 </div>
+
+<!-- Back Button -->
+<a class="back-button" href="/Domino-Games/pages/Games.html">Back</a>
+
 </body>
 </html>
