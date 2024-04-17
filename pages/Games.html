@@ -38,6 +38,11 @@
     height: auto;
     border-radius: 20px; /* Squircle shape */
     overflow: hidden; /* Ensuring the image fits within the shape */
+    transition: all 0.3s ease; /* Smooth transition */
+  }
+
+  .slot:hover {
+    transform: scale(1.1); /* Increase size on hover */
   }
 
   .slot img {
@@ -68,16 +73,20 @@
 
 <div class="container">
   <!-- Slot 1 -->
-  <div class="slot">
-    <img src="/Domino-Games/1v1.lol/1v1.lol_(LOGO).jpeg" alt="1v1.lol">
-    <div class="slot-text">1v1.lol</div>
-  </div>
+  <a href="/Domino-Games/1v1.lol/">
+    <div class="slot">
+      <img src="/Domino-Games/1v1.lol/1v1.lol_(LOGO).jpeg" alt="1v1.lol">
+      <div class="slot-text">1v1.lol</div>
+    </div>
+  </a>
 
   <!-- Slot 2 -->
-  <div class="slot">
-    <img src="/Domino-Games/Minecraft/Minecraft-LOGO.jpeg" alt="Minecraft">
-    <div class="slot-text">Minecraft</div>
-  </div>
+  <a href="/Domino-Games/Minecraft/">
+    <div class="slot">
+      <img src="/Domino-Games/Minecraft/Minecraft-LOGO.jpeg" alt="Minecraft">
+      <div class="slot-text">Minecraft</div>
+    </div>
+  </a>
 
   <!-- Add more slots as needed -->
 </div>
