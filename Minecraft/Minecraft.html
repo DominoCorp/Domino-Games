@@ -41,6 +41,26 @@
   .slot:hover {
     transform: scale(1.1); /* Grow slightly bigger on hover */
   }
+
+  .back-button {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 2px solid yellow;
+    background-color: transparent;
+    color: yellow;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    outline: none;
+  }
+  .back-button:hover {
+    font-size: 20px;
+    background-color: yellow;
+    color: transparent;
+  }
 </style>
 </head>
 
@@ -64,5 +84,14 @@
 
   <!-- Add more slots as needed -->
 </div>
+
+<button class="back-button" onclick="redirectToPreviousPage()">Back</button>
+
+<script>
+  function redirectToPreviousPage() {
+    window.location.href = document.referrer;
+  }
+</script>
+
 </body>
 </html>
