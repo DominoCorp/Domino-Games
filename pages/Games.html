@@ -42,6 +42,28 @@
   .slot:hover {
     transform: scale(1.1); /* Grow slightly bigger on hover */
   }
+
+  .back-button {
+    position: fixed;
+    bottom: 30px; /* Adjust the space from the bottom */
+    left: 50%;
+    transform: translateX(-50%);
+    border: 2px solid yellow;
+    background-color: transparent;
+    color: yellow;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    outline: none;
+    text-decoration: none; /* Remove underline for anchor element */
+    width: 5 times the original width; /* 5 times wider */
+  }
+  .back-button:hover {
+    font-size: 20px;
+    background-color: yellow;
+    color: transparent;
+  }
 </style>
 </head>
 
@@ -65,6 +87,14 @@
 
   <!-- Add more slots as needed -->
 </div>
+
+<a class="back-button" href="/Domino-Games/pages/Games.html">Back</a>
+
+<script>
+  function redirectToPreviousPage() {
+    window.location.href = document.referrer;
+  }
+</script>
 
 </body>
 </html>
