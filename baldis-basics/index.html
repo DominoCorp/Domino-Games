@@ -1,17 +1,64 @@
+<!DOCTYPE html>
 <html>
-<header>
-
-<link rel="stylesheet" href="../baldis-basics/TemplateData/style.css">
+<head>
+    <link rel="stylesheet" href="../baldis-basics/TemplateData/style.css">
     <script src="../baldis-basics/TemplateData/UnityProgress.js"></script>
-	<script src="/Domino-Games/baldis-basics/baldi.js"></script>
+    <script src="/Domino-Games/baldis-basics/baldi.js"></script>
     <script>
-      var gameInstance = UnityLoader.instantiate("gameContainer", "../baldis-basics/baldi.json", {onProgress: UnityProgress,Module:{onRuntimeInitialized: function() {UnityProgress(gameInstance, "complete")}}});
+        var gameInstance = UnityLoader.instantiate("gameContainer", "../baldis-basics/baldi.json", {
+            onProgress: UnityProgress,
+            Module: {
+                onRuntimeInitialized: function() {
+                    UnityProgress(gameInstance, "complete")
+                }
+            }
+        });
     </script>
-</header>
+    
+    <style>
+        #widget {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            width: 50px;
+            height: 50px;
+            background-color: #007bff;
+            border-radius: 50%;
+            transition: transform 2.5s;
+        }
+
+        #widget:hover {
+            transform: rotate(360deg);
+        }
+        
+        #widget a {
+            display: block;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            line-height: 50px;
+        }
+        
+        #widget img {
+            max-width: 80%;
+            max-height: 80%;
+            margin: auto;
+        }
+    </style>
+</head>
 <body style="margin: 0;">
-<div class="webgl-content">
+
+    <!-- Widget Code -->
+    <div id="widget">
+        <a href="/Domino-Games/index.html"><img src="/Domino-Games/home.png" alt="Home"></a>
+    </div>
+
+    <!-- Game Container -->
+    <div class="webgl-content">
         <div id="gameContainer" style="width: 100%; height: 100%; margin: auto"></div>
-        </div>
-  <script src="/Domino-Games/baldis-basics/firebase-app.js"></script>
+    </div>
+
+    <!-- Firebase -->
+    <script src="/Domino-Games/baldis-basics/firebase-app.js"></script>
 </body>
 </html>
