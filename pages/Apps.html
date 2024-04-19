@@ -1,1 +1,103 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Syne"/>
+<title>Games</title>
+<style>
+  body {
+    background-image: url(/Domino-Games/background.avif);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    font-family: "Syne", sans-serif;
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+  }
+  .title {
+    text-align: center;
+    font-size: 3em; /* Bigger title */
+    margin-top: 50px; /* Adjust as needed */
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adding shadow for better readability */
+  }
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px; /* Adjust as needed */
+  }
+  .slot {
+    position: relative; /* Needed for positioning */
+    width: 200px;
+    height: auto;
+    border-radius: 20px; /* Squircle shape */
+    overflow: hidden; /* Ensuring the image fits within the shape */
+    transition: all 0.3s ease; /* Smooth transition */
+  }
+  .slot:hover {
+    transform: scale(1.1); /* Increase size on hover */
+  }
+  .slot img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px; /* Ensure the image has rounded corners */
+  }
+  .slot-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 1.2em;
+    color: white;
+    text-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Updated shadow */
+    font-family: "Syne", sans-serif;
+    padding: 10px 0;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  .back-button {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 2px solid yellow;
+    background-color: transparent;
+    color: yellow; /* Change text color to yellow */
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    outline: none;
+    text-decoration: none;
+  }
+  .back-button:hover {
+    font-size: 20px;
+    background-color: yellow;
+    color: transparent;
+  }
+</style>
+</head>
+<body>
+<div class="title">Apps</div>
+
+<div class="container">
+  <!-- Slot 1 -->
+  <a href="/Domino-Games/ERROR-404.html">
+    <div class="slot">
+      <img src="/Domino-Games/ADD.png" alt="Add More">
+      <div class="slot-text">Ask To Add More</div>
+    </div>
+  </a>
+
+  <!-- Add more slots as needed -->
+  
+<!-- Back Button -->
+<a class="back-button" href="/Domino-Games/index.html">Back</a>
+
+</body>
+</html>
