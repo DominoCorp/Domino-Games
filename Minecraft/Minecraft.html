@@ -32,6 +32,7 @@
   }
 
   .slot {
+    position: relative; /* Needed for positioning */
     width: 200px;
     height: 200px;
     border-radius: 20px; /* Squircle shape */
@@ -41,6 +42,26 @@
 
   .slot:hover {
     transform: scale(1.1); /* Grow slightly bigger on hover */
+  }
+
+  .slot img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .slot-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 1.2em;
+    color: white;
+    text-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Updated shadow */
+    font-family: "Syne", sans-serif;
+    padding: 10px 0;
+    background-color: rgba(0, 0, 0, 0.5);
   }
 
   .back-button {
@@ -59,6 +80,7 @@
     text-decoration: none; /* Remove underline for anchor element */
     width: 5 times the original width; /* 5 times wider */
   }
+
   .back-button:hover {
     font-size: 20px;
     background-color: yellow;
@@ -74,14 +96,16 @@
   <!-- Slot 1 -->
   <a href="/Domino-Games/Minecraft/Minecraft-1_5_2.html" target="_blank">
     <div class="slot">
-      <img src="Logo-1_5_2.png" alt="Version 1.5.2" style="width: 100%; height: 100%; object-fit: cover;">
+      <img src="Logo-1_5_2.png" alt="Version 1.5.2">
+      <div class="slot-text">Version 1.5.2</div>
     </div>
   </a>
 
   <!-- Slot 2 -->
   <a href="/Domino-Games/Minecraft/Minecraft-1_8_8.html" target="_blank">
     <div class="slot">
-      <img src="Logo-1_8_8.png" alt="Version 1.8.8" style="width: 100%; height: 100%; object-fit: cover;">
+      <img src="Logo-1_8_8.png" alt="Version 1.8.8">
+      <div class="slot-text">Version 1.8.8</div>
     </div>
   </a>
 
