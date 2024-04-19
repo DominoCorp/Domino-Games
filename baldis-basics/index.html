@@ -1,20 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="../baldis-basics/TemplateData/style.css">
-    <script src="../baldis-basics/TemplateData/UnityProgress.js"></script>
-    <script src="/Domino-Games/baldis-basics/baldi.js"></script>
-    <script>
-        var gameInstance = UnityLoader.instantiate("gameContainer", "../baldis-basics/baldi.json", {
-            onProgress: UnityProgress,
-            Module: {
-                onRuntimeInitialized: function() {
-                    UnityProgress(gameInstance, "complete")
-                }
-            }
-        });
-    </script>
-    
     <style>
         #widget {
             position: fixed;
@@ -53,12 +39,25 @@
         <a href="/Domino-Games/index.html"><img src="/Domino-Games/home.png" alt="Home"></a>
     </div>
 
-    <!-- Game Container -->
+    <!-- Existing Code -->
+    <link rel="stylesheet" href="../baldis-basics/TemplateData/style.css">
+    <script src="../baldis-basics/TemplateData/UnityProgress.js"></script>
+    <script src="/Domino-Games/baldis-basics/baldi.js"></script>
+    <script>
+        var gameInstance = UnityLoader.instantiate("gameContainer", "../baldis-basics/baldi.json", {
+            onProgress: UnityProgress,
+            Module: {
+                onRuntimeInitialized: function() {
+                    UnityProgress(gameInstance, "complete")
+                }
+            }
+        });
+    </script>
+
     <div class="webgl-content">
         <div id="gameContainer" style="width: 100%; height: 100%; margin: auto"></div>
     </div>
 
-    <!-- Firebase -->
     <script src="/Domino-Games/baldis-basics/firebase-app.js"></script>
 </body>
 </html>
