@@ -80,6 +80,13 @@ function loop() {
 
   // move paddles by their velocity
   leftPaddle.y += leftPaddle.dy;
+
+  // AI movement for the right paddle
+  if (ball.y < rightPaddle.y + rightPaddle.height / 2) {
+    rightPaddle.dy = -paddleSpeed;
+  } else {
+    rightPaddle.dy = paddleSpeed;
+  }
   rightPaddle.y += rightPaddle.dy;
 
   // prevent paddles from going through walls
@@ -161,20 +168,11 @@ function loop() {
 // listen to keyboard events to move the paddles
 document.addEventListener('keydown', function(e) {
 
-  // up arrow key
-  if (e.which === 38) {
-    rightPaddle.dy = -paddleSpeed;
-  }
-  // down arrow key
-  else if (e.which === 40) {
-    rightPaddle.dy = paddleSpeed;
-  }
-
   // w key
   if (e.which === 87) {
     leftPaddle.dy = -paddleSpeed;
   }
-  // a key
+  // s key
   else if (e.which === 83) {
     leftPaddle.dy = paddleSpeed;
   }
@@ -182,10 +180,6 @@ document.addEventListener('keydown', function(e) {
 
 // listen to keyboard events to stop the paddle if key is released
 document.addEventListener('keyup', function(e) {
-  if (e.which === 38 || e.which === 40) {
-    rightPaddle.dy = 0;
-  }
-
   if (e.which === 83 || e.which === 87) {
     leftPaddle.dy = 0;
   }
