@@ -73,6 +73,24 @@ function collides(obj1, obj2) {
          obj1.y + obj1.height > obj2.y;
 }
 
+// AI paddle update function with delay
+let targetRightPaddleY = rightPaddle.y;
+function updateAIPaddle() {
+  if (ball.y < rightPaddle.y + rightPaddle.height / 2) {
+    targetRightPaddleY = rightPaddle.y - paddleSpeed;
+  } else {
+    targetRightPaddleY = rightPaddle.y + paddleSpeed;
+  }
+  setTimeout(() => {
+    rightPaddle.y = targetRightPaddleY;
+    if (rightPaddle.y < grid) {
+      rightPaddle.y = grid;
+    } else if (rightPaddle.y > maxPaddleY) {
+      rightPaddle.y = maxPaddleY;
+    }
+  }, 300);
+}
+
 // game loop
 function loop() {
   requestAnimationFrame(loop);
@@ -81,13 +99,8 @@ function loop() {
   // move paddles by their velocity
   leftPaddle.y += leftPaddle.dy;
 
-  // AI movement for the right paddle
-  if (ball.y < rightPaddle.y + rightPaddle.height / 2) {
-    rightPaddle.dy = -paddleSpeed;
-  } else {
-    rightPaddle.dy = paddleSpeed;
-  }
-  rightPaddle.y += rightPaddle.dy;
+  // update AI paddle
+  updateAIPaddle();
 
   // prevent paddles from going through walls
   if (leftPaddle.y < grid) {
@@ -95,13 +108,6 @@ function loop() {
   }
   else if (leftPaddle.y > maxPaddleY) {
     leftPaddle.y = maxPaddleY;
-  }
-
-  if (rightPaddle.y < grid) {
-    rightPaddle.y = grid;
-  }
-  else if (rightPaddle.y > maxPaddleY) {
-    rightPaddle.y = maxPaddleY;
   }
 
   // draw paddles
